@@ -1,0 +1,7 @@
+# Root
+*.zip
+*.tar.gz
+/ocicl/*
+
+## src
+
