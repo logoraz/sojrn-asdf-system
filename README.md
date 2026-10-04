@@ -1,21 +1,26 @@
 # sojrn-asdf-system
 
-sojrn ASDF System Extension — custom system classes and build hooks for [sojrn](https://github.com/logoraz/sojrn).
+sojrn ASDF System Extension — custom system classes and build hooks for
+[sojrn](https://github.com/logoraz/sojrn).
 
 ## Overview
 
-Provides `ASDF` system classes (and package-inferred-system variants) via `:class`:
+Provides `ASDF` system classes (and package-inferred-system variants) via
+`:class`:
 
 - Systems
   - `sojrn-asdf-system-extension` — base system class
   - `sojrn-package-inferred-system` — PIS variant of the base class
 - Functionalities
   - `sojrn-exec-system` — executable build hook (works with either variant above)
-  - `sojrn-doc-system` — Markdown → HTML documentation generation (works with either
-    variant above)
+  - `sojrn-exec-package-inferred-system` — PIS variant of `sojrn-exec-system`
+  - `sojrn-doc-system` — Markdown → HTML documentation generation (works with
+    either variant above)
+  - `sojrn-doc-package-inferred-system` — PIS variant of `sojrn-doc-system`
 
-Also configures CFFI foreign-library paths for [GuixOS](https://guix.gnu.org/en/about/) (`GUIX_ENVIRONMENT`) and
-Windows (msys2/ucrt64).
+Also configures CFFI foreign-library paths for
+[GuixOS](https://guix.gnu.org/en/about/) (`GUIX_ENVIRONMENT`) and Windows
+(msys2/ucrt64).
 
 ## Usage
 
@@ -36,6 +41,30 @@ Windows (msys2/ucrt64).
   :build-pathname "dist/my-system"
   :entry-point "my-system:main")
 ```
+
+## Dependencies
+
+| System                                                       | Role                              |
+|--------------------------------------------------------------|-----------------------------------|
+| `asdf`                                                       | Build system this library extends |
+| `khazern-intrinsic`                                          | Replaces `cl:loop` (see below)    |
+| `khazern-extension-intrinsic`                                | Extended `LOOP` syntax            |
+| `cffi`                                                       | Foreign-library path setup        |
+| `3bmd`, `3bmd-ext-code-blocks`, `colorize`, `print-licenses` | Documentation generation          |
+
+### LOOP: Khazern
+
+This library loads `khazern-intrinsic` and `khazern-extension-intrinsic` from
+[Khazern](https://github.com/clasp-developers/Khazern), a portable and extensible
+implementation of the standard `LOOP`. Loading it redefines `COMMON-LISP:LOOP` in
+the running image, so every system built after `sojrn-asdf-system` is loaded,
+dependencies included, uses Khazern's `LOOP` with no per-package changes.  That
+image-wide effect is deliberate and suits application builds.
+
+- Extended syntax (iteration paths) comes from `khazern-extension-intrinsic`.
+- `LOOP` lives in the `COMMON-LISP` package, so ASDF's recompilation tracking
+  for systems depending on `khazern-intrinsic` may be unreliable. If behavior
+  looks stale, clear the fasl cache.
 
 ## License
 

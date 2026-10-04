@@ -4,6 +4,8 @@
   :license "LGPL-2.1-only WITH LLGPL"
   :version (:read-file-form "data/version.sexp" :at (0 1))
   :depends-on ("asdf"
+               "khazern-intrinsic"
+               "khazern-extension-intrinsic"
                "cffi"
                "3bmd"
                "3bmd-ext-code-blocks"

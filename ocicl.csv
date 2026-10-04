@@ -1,0 +1,15 @@
+acclimation, ghcr.io/ocicl/acclimation@sha256:f6f7b6782ea4fa53b86f23cf169f06f16a441000e5512955f0ef6ab065adbe4b, acclimation-20251218-9339b92/acclimation.asd
+acclimation-temperature, ghcr.io/ocicl/acclimation@sha256:f6f7b6782ea4fa53b86f23cf169f06f16a441000e5512955f0ef6ab065adbe4b, acclimation-20251218-9339b92/Temperature/acclimation-temperature.asd
+alexandria, ghcr.io/ocicl/alexandria@sha256:407634b0781b2d8fc3e55a30432bcb5d0c042af2feb2d1d72de825940b0fb0df, alexandria-20260812-f283e25/alexandria.asd
+closer-mop, ghcr.io/ocicl/closer-mop@sha256:39ec579e68118a8be57a7882812ff31094a031f88b77f11cf4434a92261f1126, closer-mop-20260329-04db182/closer-mop.asd
+iterate, ghcr.io/ocicl/iterate@sha256:6950c55e3782d58cabbbb5753111a70d8cafab8348b7fd6f2143d9abeaab46fb, iterate-20250703-d27d7ff/iterate.asd
+khazern, ghcr.io/ocicl/khazern-intrinsic@sha256:060d405be0e3b1eec534d8155a14165733611eb75363d1dfb10e64c03858dc22, Khazern-20260812-9f52a3c/khazern.asd
+khazern-extension, ghcr.io/ocicl/khazern-intrinsic@sha256:060d405be0e3b1eec534d8155a14165733611eb75363d1dfb10e64c03858dc22, Khazern-20260812-9f52a3c/khazern-extension.asd
+khazern-extension-extrinsic, ghcr.io/ocicl/khazern-intrinsic@sha256:060d405be0e3b1eec534d8155a14165733611eb75363d1dfb10e64c03858dc22, Khazern-20260812-9f52a3c/khazern-extension-extrinsic.asd
+khazern-extension-intrinsic, ghcr.io/ocicl/khazern-intrinsic@sha256:060d405be0e3b1eec534d8155a14165733611eb75363d1dfb10e64c03858dc22, Khazern-20260812-9f52a3c/khazern-extension-intrinsic.asd
+khazern-extrinsic, ghcr.io/ocicl/khazern-intrinsic@sha256:060d405be0e3b1eec534d8155a14165733611eb75363d1dfb10e64c03858dc22, Khazern-20260812-9f52a3c/khazern-extrinsic.asd
+khazern-intrinsic, ghcr.io/ocicl/khazern-intrinsic@sha256:060d405be0e3b1eec534d8155a14165733611eb75363d1dfb10e64c03858dc22, Khazern-20260812-9f52a3c/khazern-intrinsic.asd
+print-licenses, ghcr.io/ocicl/print-licenses@sha256:985c13101c88fba22672713e2a070b41f82c8c4ec68c4cbd696054313e63f6fa, print-licenses-20240503-3949663/print-licenses.asd
+trinsic, ghcr.io/ocicl/trinsic@sha256:26215149f00f4633a8c43b1d2764ec0cac1ccd4640afcd6f4410c77418c97f5d, Trinsic-20260124-3a370f9/trinsic.asd
+trivial-package-locks, ghcr.io/ocicl/trivial-package-locks@sha256:b50e6bf59794f7b5ac77bd68b30b57f6f04d972fb81f28cc0e0c03890db32ca8, trivial-package-locks-20260812-c2dd381/trivial-package-locks.asd
+trivial-with-current-source-form, ghcr.io/ocicl/trivial-with-current-source-form@sha256:955baad39fb52d9d02af21ea36442c9675419c2486392279f669ada9788f3e3b, trivial-with-current-source-form-20240503-dc3fff9/trivial-with-current-source-form.asd
